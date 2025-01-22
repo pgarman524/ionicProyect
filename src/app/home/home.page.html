@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Proyecto Videojuegos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label>Título</ion-label>
+    <ion-input [(ngModel)]="videojuego.titulo"></ion-input>
+  </ion-item>
+
+
+
+  <ion-item>
+    <ion-label>Nota</ion-label>
+    <ion-input [(ngModel)]="videojuego.nota"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Imagen url</ion-label>
+    <ion-input [(ngModel)]="videojuego.imagen"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Fecha Lanzamiento</ion-label>
+    <ion-input [(ngModel)]="videojuego.fecha_nac"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Descripción</ion-label>
+    <ion-input [(ngModel)]="videojuego.descripcion"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Género</ion-label>
+    <ion-input [(ngModel)]="videojuego.genero"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="clickBotonInsertar()">Añadir videojuego</ion-button>
+
+
+  <h1>LISTA DE VIDEOJUEGOS</h1>
+
+  <ion-list>
+    <ion-item *ngFor="let documentTarea of arrayColeccionVideojuegos">
+      <ion-grid>
+        <ion-row>
+          <h2>{{documentTarea.data.titulo}}</h2>
+        </ion-row>
+        <ion-row>
+          <ion-img [src]="documentTarea.data.imagen"></ion-img>
+        </ion-row>
+        <ion-row>
+          <p>{{documentTarea.data.descripcion}}</p>
+        </ion-row>
+        <ion-row>
+          <p>{{documentTarea.data.nota}}</p>
+        </ion-row>
+        <ion-row>
+          <ion-button (click)="clicBotonBorrar(documentTarea.id)">Borrar</ion-button>
+          <ion-button (click)="clicBotonModificar(documentTarea.id, documentTarea.data)">Editar</ion-button>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
