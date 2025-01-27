@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ProyectoVideojuego } from '../proyecto-videojuego';
 import { FirestoreService } from '../firestore.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -18,10 +18,11 @@ export class HomePage {
   }];
 
 
-  constructor(private firestoreService: FirestoreService) {
+  constructor(private firestoreService: FirestoreService, private router: Router) {
     //  Crear un videojuego vacío
     this.videojuego = {} as ProyectoVideojuego;
     this.obtenerListaVideojuegos();
+    this.router = router;
   }
 
   clickBotonInsertar() {
@@ -60,6 +61,7 @@ export class HomePage {
     this.videojuego.descripcion = idVideojuego.data.descripcion;
     this.videojuego.genero = idVideojuego.data.genero;
 
+
   }
 
   clicBotonBorrar(id: string) {
@@ -74,10 +76,14 @@ export class HomePage {
 
 
   clicBotonModificar(id: string, datos: any) {
+    this.router.navigate(['/detalle']);
+
+
     this.firestoreService.actualizar("videojuegos", id, datos).then(() => {
       this.obtenerListaVideojuegos();
       this.videojuego = {} as ProyectoVideojuego;
       console.log('Videojuego modificado correctamente');
+
     })
   }
 }
