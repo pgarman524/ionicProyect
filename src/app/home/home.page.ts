@@ -76,7 +76,14 @@ export class HomePage {
 
 
   clicBotonModificar(id: string, datos: any) {
-    this.router.navigate(['/detalle']);
+    this.router.navigate(['/detalle', id]);
+
+
+
+  }
+
+  clicBotonEditar(id: string, datos: any) {
+    this.router.navigate(['/home', id]);
 
 
     this.firestoreService.actualizar("videojuegos", id, datos).then(() => {

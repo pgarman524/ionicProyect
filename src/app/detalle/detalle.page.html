@@ -10,4 +10,28 @@
       <ion-title size="large">detalle</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-list>
+    <ion-row>
+      <p>ID: {{id}}</p>
+    </ion-row>
+
+    <ion-grid>
+      <ion-row>
+        <h2>{{documentTarea.data.titulo}}</h2>
+      </ion-row>
+      <ion-row>
+        <ion-img [src]="documentTarea.data.imagen"></ion-img>
+      </ion-row>
+      <ion-row>
+        <p>{{documentTarea.data.descripcion}}</p>
+      </ion-row>
+      <ion-row>
+        <p>{{documentTarea.data.nota}}</p>
+      </ion-row>
+      <ion-row>
+        <!-- <ion-button (click)="clicBotonEditar(documentTarea.id, documentTarea.data)">Editar</ion-button> -->
+      </ion-row>
+    </ion-grid>
+  </ion-list>
 </ion-content>
