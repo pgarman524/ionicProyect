@@ -16,12 +16,13 @@ export class DetallePage implements OnInit {
     data: {} as ProyectoVideojuego
   };
   constructor(private activatedRoute: ActivatedRoute, private firestoreService: FirestoreService, private router: Router) {
-    this.documentTarea = {} as ProyectoVideojuego;
+    this.documentTarea.data = {} as ProyectoVideojuego;
   }
 
   ngOnInit() {
     let idRecibido = this.activatedRoute.snapshot.paramMap.get('id');
     if (idRecibido != null) {
+      console.log(idRecibido);
       this.id = idRecibido;
 
       this.firestoreService.consultarPorId("videojuegos", this.id).subscribe((resultado: any) => {
@@ -40,15 +41,17 @@ export class DetallePage implements OnInit {
 
 
   // TENGO QUE ARREGLAR ESTO
-  clicBotonEditar(id: string, datos: any) {
-    this.router.navigate(['/home', id]);
+  clickBotonEditar(id: string, datos: any) {
+    this.router.navigate(['/home']);
 
 
     this.firestoreService.actualizar("videojuegos", id, datos).then(() => {
-      this.obtenerListaVideojuegos();
-      this.videojuego = {} as ProyectoVideojuego;
+
+      this.documentTarea.data = {} as ProyectoVideojuego;
       console.log('Videojuego modificado correctamente');
 
     })
+
+
   }
 }

@@ -16,6 +16,37 @@
       <p>ID: {{id}}</p>
     </ion-row>
 
+    <ion-row>
+      <ion-item>
+        <ion-label position="floating">Título</ion-label>
+        <ion-input [(ngModel)]="documentTarea.data.titulo"></ion-input>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <ion-label position="floating">Imagen URL</ion-label>
+        <ion-input [(ngModel)]="documentTarea.data.imagen"></ion-input>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-textarea [(ngModel)]="documentTarea.data.descripcion"></ion-textarea>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <ion-label position="floating">Nota</ion-label>
+        <ion-input [(ngModel)]="documentTarea.data.nota"></ion-input>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-button expand="full" (click)="clickBotonEditar(id, documentTarea.data)">Guardar Cambios</ion-button>
+
+    </ion-row>
+
+
+
     <ion-grid>
       <ion-row>
         <h2>{{documentTarea.data.titulo}}</h2>

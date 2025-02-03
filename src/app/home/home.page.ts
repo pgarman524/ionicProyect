@@ -83,14 +83,14 @@ export class HomePage {
   }
 
   clicBotonEditar(id: string, datos: any) {
-    this.router.navigate(['/home', id]);
+
 
 
     this.firestoreService.actualizar("videojuegos", id, datos).then(() => {
       this.obtenerListaVideojuegos();
       this.videojuego = {} as ProyectoVideojuego;
       console.log('Videojuego modificado correctamente');
-
+      this.router.navigate(['/home', id]);
     })
   }
 }
