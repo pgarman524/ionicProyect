@@ -1,0 +1,96 @@
+ion-content {
+    --padding-start: 16px;
+    --padding-end: 16px;
+}
+
+.featured-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.featured-image ion-img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.data-block {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+ion-item {
+    --background: transparent;
+    margin-bottom: 16px;
+}
+
+ion-label {
+    font-weight: bold;
+}
+
+ion-button {
+    margin-top: 16px;
+    transition: background-color 0.3s ease;
+}
+
+ion-button:hover {
+    background-color: #3171e0;
+}
+
+ion-fab-button {
+    --background: #3880ff;
+    --color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+ion-fab-button:hover {
+    background-color: #3171e0;
+}
+
+ion-toolbar {
+    --background: #3880ff;
+    --color: #fff;
+}
+
+ion-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+ion-img {
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+    max-width: 300px;
+    max-height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+ion-img:hover {
+    transform: scale(1.05);
+}
+
+ion-grid {
+    margin-top: 32px;
+}
+
+ion-row h2 {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+ion-row p {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #666;
+}

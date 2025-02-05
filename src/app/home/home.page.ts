@@ -25,6 +25,10 @@ export class HomePage {
     this.router = router;
   }
 
+  navigateToDetail(id: string) {
+    this.router.navigate(['/detalle', id]);
+  }
+
   clickBotonInsertar() {
     this.firestoreService.insertar('videojuegos', this.videojuego).then(() => {
       console.log('Videojuego insertado correctamente');
