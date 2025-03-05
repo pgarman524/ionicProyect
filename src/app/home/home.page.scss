@@ -60,7 +60,6 @@ ion-item {
   margin-bottom: 4px;
 }
 
-
 ion-card {
   background: #f9f9f9;
   border-radius: 12px;
@@ -68,12 +67,9 @@ ion-card {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 4px;
-  max-width: 180px;
-  /* Adjusted for 5 cards per row */
+  max-width: 180px; /* Adjusted for 5 cards per row */
   flex: 1 1 calc(20% - 8px);
   margin-right: 8px;
-  min-height: 350px;
-  /* Asegura que las tarjetas tengan una altura mínima */
 }
 
 ion-card:nth-child(5n) {
@@ -89,22 +85,17 @@ ion-card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8px;
-  /* Slightly decreased */
+  padding: 16px; /* Slightly decreased */
 }
 
 ion-img {
   width: 100%;
   height: auto;
-  margin-top: 16px;
-  /* Slightly decreased */
-  max-width: 150px;
-  /* Adjusted for 5 cards per row */
-  max-height: 200px;
-  /* Adjusted for 5 cards per row */
+  margin-top: 16px; /* Slightly decreased */
+  max-width: 150px; /* Adjusted for 5 cards per row */
+  max-height: 200px; /* Adjusted for 5 cards per row */
   border-radius: 8px;
-  margin-bottom: 16px;
-  /* Slightly decreased */
+  margin-bottom: 16px; /* Slightly decreased */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -113,24 +104,19 @@ ion-img {
 }
 
 .card-data h2 {
-  font-size: 1.2em;
-  /* Slightly decreased */
-  margin-bottom: 10px;
-  /* Slightly decreased */
+  font-size: 1.2em; /* Slightly decreased */
+  margin-bottom: 10px; /* Slightly decreased */
   color: #333;
 }
 
 .card-data p {
-  font-size: 1.1em;
-  /* Slightly decreased */
-  margin-bottom: 10px;
-  /* Slightly decreased */
+  font-size: 1.1em; /* Slightly decreased */
+  margin-bottom: 10px; /* Slightly decreased */
   color: #666;
 }
 
 ion-button {
-  margin-top: 16px;
-  /* Slightly decreased */
+  margin-top: 16px; /* Slightly decreased */
   transition: background-color 0.3s ease;
 }
 
@@ -142,15 +128,13 @@ ion-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 10px;
-  /* Slightly decreased */
+  margin-top: 10px; /* Slightly decreased */
 }
-
-
 
 ion-row {
   display: flex;
   flex-wrap: wrap;
+  gap: 2px; /* Decreased horizontal gap */
 }
 
 ion-row h2 {
